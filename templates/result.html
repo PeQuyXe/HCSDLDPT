@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết Quả</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Kết Quả</h1>
+        {% if nearest_images %}
+        <h2>Các ảnh gần nhất:</h2>
+        <div class="row">
+            {% for image_path in nearest_images[:3] %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename=image_path) }}" alt="{{ label }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ label }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <a href="/" class="btn btn-primary mt-4">Trở về</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* CSS Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.nearest-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-item {
+    margin: 10px;
+}
+
+.image-item img {
+    width: 200px;
+    height: auto;
+}
+
+/* Additional styles for the color features plot */
+.color-features-plot {
+    margin-top: 30px;
+}
